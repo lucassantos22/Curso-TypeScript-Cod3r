@@ -110,3 +110,93 @@ class Ferrari extends Carro {
 
 const f40 = new Ferrari('F40', 324)
 console.log(f40.acelerar());
+
+// Getters & Setters
+class Pessoa {
+    private _idade: number = 0;
+
+    get idade(): number{
+        return this._idade;
+    }
+
+    set idade(valor: number) {
+        if (valor >= 0 && valor <= 120){
+            this._idade = valor;
+        }
+    }
+}
+
+const pessoa1 = new Pessoa;
+pessoa1.idade = 10;
+console.log(pessoa1.idade);
+
+// Atributos e métodos estáticos; (O que é estático está associado à classe e não a instância)
+
+class Matematica {
+
+    static PI = 3.1416;
+
+    static areaCirc(raio: number): number {
+        return this.PI * raio * raio;
+    }
+
+}
+
+console.log(Matematica.areaCirc(2));
+
+// Classes abstratas (Não podem ser instanciadas, não existem em js mas sim em typescript)
+abstract class x {
+
+    abstract y(a: number): number; // Métodos abstratados não tem implementação
+
+    w(b: number): void {
+        console.log(b);
+    }
+
+}
+
+class x2 {
+
+    y(a: number): number {
+        return a;
+    }
+
+    w(b: number): void {
+        console.log(b);
+    }
+
+}
+
+class Unico {
+
+    private static instance: Unico = new Unico;
+
+    private constructor() {
+
+    }
+
+    static getInstance() {
+        return Unico.instance;
+    }
+
+    agora() {
+        return new Date
+    }
+    
+}
+
+console.log(Unico.getInstance().agora());
+
+// Atributos somente leitura (Não existe no js, só no ts)
+class Aviao {
+
+    public readonly modelo: string;
+    constructor(modelo: string, public readonly prefixo: string){
+        this.modelo = modelo;
+    }
+
+}
+
+const turboHelice = new Aviao('Tu-114', 'PT-ABC');
+// turboHelice.modelo = 'DC-8'; Não deixa pois o atributo é readonly, depois de uma vez setado não dá pra modificar;
+// turboHelice.prefixo = 'PT-DEF'; Não deixa pois o atributo é readonly, depois de uma vez setado não dá pra modificar;
