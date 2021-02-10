@@ -1,3 +1,3 @@
 "use strict";
-var canal = ' Gaveta';
+let canal = ' Gaveta';
 //# sourceMappingURL=compilador.js.map
