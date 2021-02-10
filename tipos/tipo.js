@@ -64,3 +64,13 @@ if (typeof valor === 'number') {
 else {
     console.log('Não é um number');
 }
+//never (explicitar que função vai terminar com erro ou vai ficar em loop)
+function falha(msg) {
+    while (true) {
+        throw new Error(msg);
+    }
+}
+;
+var altura = 12;
+altura = null;
+//# sourceMappingURL=tipo.js.map
