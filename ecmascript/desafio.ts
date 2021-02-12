@@ -21,9 +21,14 @@ const nums2: number[] = [-3, 33, 38, 5]
 const array: number[] = [55, 20, ...nums2]
 console.log(array)
 
+interface Profissional {
+    primeiroNome: string, 
+    experiencia: number
+}
+
 //5) Simplifique os trechos de código abaixo utilizando o operador Destructuring
 const [nota1, nota2, nota3] = [8.5, 6.3, 9.4]
 console.log(nota1, nota2, nota3)
-const cientista: {primeiroNome: string, experiencia: number} = {primeiroNome: "Will", experiencia: 12}
+const cientista: Profissional = {primeiroNome: "Will", experiencia: 12}
 const {primeiroNome, experiencia} = cientista;
 console.log(primeiroNome, experiencia)
