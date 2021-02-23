@@ -12,4 +12,15 @@ avaliacoes.push(8.4);
 ;
 //avaliacoes.push('5.5'); Vai dar problema pois é string e o array aceita apenas numbers
 console.log(avaliacoes);
+//Tipo Função Genérico
+const chamarEcho = echoMelhorado;
+console.log(chamarEcho('Oi'));
+//Classe com Generics
+class OperacaoBinaria {
+    constructor(operando1, operando2) {
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+    }
+}
+//console.log(new OperacaoBinaria<number, string>(1, 2).executar());
 //# sourceMappingURL=genericos.js.map

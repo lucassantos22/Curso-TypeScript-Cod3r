@@ -29,6 +29,12 @@ enum Cor {
     Azul = 'azul '
 }
 
+const s = {
+    Cor
+}
+
+console.log(s.Cor.Azul )
+
 let minhaCor: Cor = Cor.Verde;
 
 //funções

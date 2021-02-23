@@ -23,6 +23,10 @@ var Cor;
     Cor["Verde"] = "verde";
     Cor["Azul"] = "azul ";
 })(Cor || (Cor = {}));
+const s = {
+    Cor
+};
+console.log(s.Cor.Azul);
 let minhaCor = Cor.Verde;
 //funções
 function retornaMeuNome(nome) {
