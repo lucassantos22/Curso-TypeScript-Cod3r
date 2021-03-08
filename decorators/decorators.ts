@@ -57,3 +57,9 @@ class MudancaAdministrativa {
  
 const mudancaAdministrativa: any = new MudancaAdministrativa
 mudancaAdministrativa.critico()
+
+function paramInfo(alvo: any, nomeMetodo: string, indiceParm: number) {
+    console.log(alvo);
+    console.log(nomeMetodo);
+    console.log(indiceParm);
+}
